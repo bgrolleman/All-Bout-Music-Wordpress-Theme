@@ -1,0 +1,3 @@
+Select on support lines (Top, Left, Right and just above footer)
+Grow with 5
+Copy visible
