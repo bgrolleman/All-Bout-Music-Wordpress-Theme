@@ -1,20 +1,4 @@
-<?php
-/**
- * Main Index Package
- */
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
-	<head profile="http://gmpg.org/xfn/11">
-		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-		<title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
-		<style type="text/css" media="screen">
-			@import url( <?php bloginfo('stylesheet_url'); ?> );
-		</style>
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-		<?php wp_get_archives('type=monthly&format=link'); ?>
-		<?php wp_head(); ?>
-	</head>
+<?php get_header(); ?>
 	<body <?php body_class(); ?>>
 		<div id="content">
 			<?php if (have_posts()) : 
@@ -42,8 +26,4 @@
 				<?php wp_list_pages('sort_column=menu_order&depth=1&title_li='); ?>
 			</ul>
 		</div>
-		<div id="footer">
-			<h6>Allboutmusic.de - Copyright 2010 - Contact <a href="mailto:info@allboutmusic.de">info@allboutmusic.de</a></h6>
-		</div>
-	</body>
-</html>
+<?php get_footer(); ?>
