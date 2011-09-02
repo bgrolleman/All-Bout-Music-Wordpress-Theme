@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<body <?php body_class(); ?>>
+	<body>
 		<div id="content">
 			<?php if (have_posts()) : 
 				while (have_posts()) : the_post(); ?>
@@ -18,9 +18,6 @@
 		<div id="sidebar">
 			<div id="languagebar">
 				<?php echo qtrans_generateLanguageSelectCode('image'); ?>
-				<!--<a href="#"><img src="<?php bloginfo('template_directory') ?>/flags/de.png" /></a>
-				<a href="#"><img src="<?php bloginfo('template_directory') ?>/flags/gb.png" /></a>
-				<a href="#"><img src="<?php bloginfo('template_directory') ?>/flags/nl.png" /></a>-->
 			</div>
 			<ul>
 				<?php wp_list_pages('sort_column=menu_order&depth=1&title_li='); ?>
